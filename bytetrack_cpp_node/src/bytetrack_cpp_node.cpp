@@ -31,10 +31,10 @@ namespace bytetrack_cpp_node{
         std::vector<bboxes_ex_msgs::msg::BoundingBox> bboxes;
         for(int i=0; i<trackers.size(); i++){
             bboxes_ex_msgs::msg::BoundingBox bbox;
-            bbox.ymin = trackers[i].tlbr[0];
-            bbox.xmin = trackers[i].tlbr[1];
-            bbox.ymax = trackers[i].tlbr[2];
-            bbox.xmax = trackers[i].tlbr[3];
+            bbox.xmin = trackers[i].tlbr[0];
+            bbox.ymin = trackers[i].tlbr[1];
+            bbox.xmax = trackers[i].tlbr[2];
+            bbox.ymax = trackers[i].tlbr[3];
             bbox.id = trackers[i].track_id;
             bbox.class_id = COCO_CLASSES[trackers[i].label];
             // bbox.center_dist = 0.0;
